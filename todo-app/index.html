@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Daily To-Do</h1>
+      <p class="subtitle">Add tasks, mark them complete, edit or delete. Completed tasks are shown separately.</p>
+    </header>
+
+    <section class="new-task">
+      <input id="taskInput" type="text" placeholder="What do you need to do today?" />
+      <button id="addBtn">Add Task</button>
+    </section>
+
+    <main>
+      <section class="tasks">
+        <h2>Pending Tasks <span id="pendingCount" class="count"></span></h2>
+        <ul id="pendingList" class="task-list"></ul>
+      </section>
+
+      <section class="tasks completed">
+        <h2>Completed Tasks <span id="completedCount" class="count"></span></h2>
+        <ul id="completedList" class="task-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>Tasks are stored locally in your browser (localStorage).</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.order-page {
+  padding: 24px;
+  min-height: calc(100vh - 72px);
+  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.order-card {
+  width: 100%;
+  max-width: 920px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.order-card h2 {
+  margin: 0 0 8px 0;
+  color: orangered;
+}
+
+.order-card p { color: #666; }
+
+.group { margin-top: 16px; }
+.group h3 { margin: 0 0 8px 0; font-size: 1rem; }
+
+.options { display: flex; flex-wrap: wrap; gap: 10px; }
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  min-width: 180px;
+}
+.option input { width: 16px; height: 16px; }
+.option .label-text { font-size: 0.95rem; color: #333; }
+.option .price { color: #888; font-size: 0.85rem; margin-left: 6px; }
+
+.options.veggies .option { min-width: 140px; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; }
+.total { color: #333; }
+.buttons { display: flex; gap: 10px; }
+.place {
+  background: orangered;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.place:hover { background: #e04444; }
+.reset {
+  background: #fff;
+  color: #333;
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Summary popup */
+.summary-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+  animation: fadeIn 180ms ease-out;
+}
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+  transform: scale(0.98);
+  animation: popIn 220ms ease-out forwards;
+}
+.summary-card h3 { margin: 0 0 10px 0; color: orangered; }
+.summary-content p { margin: 6px 0; color: #333; }
+.summary-total { margin-top: 10px; font-size: 1.05rem; }
+.summary-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
+
+@keyframes popIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .option { min-width: 48%; }
+  .order-card { padding: 16px; border-radius: 10px; }
+  .footer { flex-direction: column; gap: 10px; align-items: stretch; }
+  .buttons { justify-content: space-between; }
+}
