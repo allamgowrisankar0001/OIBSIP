@@ -143,9 +143,7 @@ function Login() {
         <h1>Hello, New Adventurer!</h1>
         <p>Create an account and start your adventure today.</p>
         <ul className="overlay-features">
-          {/* <li> Join our growing community</li>
-          <li>Unlock exclusive features</li>
-          <li>Customize your experience</li> */}
+          
         </ul>
         <p className="cta">✨ Sign up and explore now!</p>
       </>
